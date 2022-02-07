@@ -33,7 +33,12 @@ devtools::install_github("cmf-uchicago/cmfproperty")
 First import `cmfproperty`.
 
 ```{r import}
-library(cmfproperty)
+install.packages('devtools') #assuming it is not already installed
+library(devtools)
+install_github('andreacirilloac/updateR')
+library(updateR)
+updateR(admin_password = 'Admin user password')
+# library(cmfproperty)
 ```
 
 To conduct our study, we need data where every roll is a unique property's sale price and assessed value for a given year.
